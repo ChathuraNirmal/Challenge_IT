@@ -42,7 +42,7 @@ document.getElementById("b1").onclick = function () {
       } else {
         noGuess++;
   
-        alert(myNumber>Guess ? "No is greater than guessed No" :"No is greater than guessed No")
+        alert(myNumber>Guess ? "No is greater than guessed No" :"No is Less than guessed No")
 
     }
   }
