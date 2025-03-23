@@ -1,4 +1,5 @@
-console.log("hello");
+alert("Guess No 0 to 10 ฅʕ•̫͡•ʔฅ");
+let count = 0;
 
 document.getElementById("b1").onclick = function () {
   let myNumber = document.getElementById("txt1").value;
@@ -10,14 +11,27 @@ document.getElementById("b1").onclick = function () {
   } else {
     let Guess = Math.floor(Math.random() * 11);
     let noGuess = 1;
-    let gotIt = false;
+  
+    console.log(count);
 
-    while (gotIt == false) {
+    if (document.getElementById("txt1").value == "") {
+      alert("Empty");
+      return;
+    }
+
+    if (count == 3) {
+      document.getElementById("b1").disabled = true;
+      alert("Rounds are Over");
+
+      return;
+    }
+    count++;
+
+  
       Guess = Math.floor(Math.random() * 11);
 
       if (Guess == myNumber) {
-        gotIt = true;
-
+  
         alert(
           "Your number is " +
             myNumber +
@@ -27,7 +41,9 @@ document.getElementById("b1").onclick = function () {
         );
       } else {
         noGuess++;
-      }
+  
+        alert(myNumber>Guess ? "No is greater than guessed No" :"No is greater than guessed No")
+
     }
   }
 };
