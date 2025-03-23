@@ -1,6 +1,6 @@
 alert("Guess No 0 to 10 ฅʕ•̫͡•ʔฅ You ve 3 rounds t do it （￣︶￣）↗　");
 let count = 0;
-let myNumber = document.getElementById("txt1").value;
+let Guess = Math.floor(Math.random() * 11);
 
 document.getElementById("b1").onclick = function () {
   if (document.getElementById("txt1").value == "") {
@@ -8,14 +8,13 @@ document.getElementById("b1").onclick = function () {
     return;
   }
 
-  
+  let myNumber = document.getElementById("txt1").value;
 
   if (myNumber > 10) {
     alert("No is greater than 10");
   } else if (myNumber < 0) {
     alert("No is less than 0");
   } else {
-    let Guess = Math.floor(Math.random() * 11);
     let noGuess = 1;
 
     console.log(count);
