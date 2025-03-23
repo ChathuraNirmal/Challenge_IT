@@ -35,7 +35,7 @@ document.getElementById("b1").onclick = function () {
           myNumber +
           " you took " +
           noGuess +
-          " times for me ≡(▔﹏▔)≡ "
+          " times for guess ≡(▔﹏▔)≡ "
       );
     } else {
       noGuess++;
